@@ -17,10 +17,12 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
+    "clean": "rimraf build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && git subtree push --prefix build origin gh-pages"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,6 +40,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-qr-reader": "^2.1.2"
+    "@types/react-qr-reader": "^2.1.2",
+    "rimraf": "^3.0.2"
   }
 }
